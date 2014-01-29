@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Translation//EN">
+<html>
+<head>
+<title>Detailansicht</title>
+<meta name="publisher" content="Fabian Wiesmann">
+<meta name="copyright" content="Fabian Wiesmann">
+<meta name="page-topic" content="PSE">
+<meta name="author" content="Fabian Wiesmann">
+<meta name="language" content="de">
+<script src="src/js/jquery-ui-1.10.1.custom/js/jquery.min.js"></script>
+<script src="src/js/hammer.js-master/dist/hammer.js"></script>
+<script src="src/js/changeText/changeText.js"></script>
+<script src="src/js/cookie\cookie.js"></script>
+<script src="src/var/b.js"></script>
+<script src="src/var/h.js"></script>
+<script src="src/var/p.js"></script>
+<link rel="stylesheet" href="src/PSE.css" />
+<link rel="stylesheet" href="src/css/detail.css" />
+</head>
+
+<body class="main" bgcolor="#000000">
+
+<script type="text/JavaScript">
+
+
+//setCookie("1","+",1);
+//setCookie("2","+",1);
+//setCookie("3","+",1);
+
+function getReferer (str) 
+{
+	if(str == '') return;
+	var wstr = str.slice(1);
+	var paare = wstr.split("&");
+	var paar, name, wert;
+	for (var i = 0; i < paare.length; i++)
+	{
+		paar = paare[i].split('=');
+		name = paar[0];
+		wert = paar[1];
+		name = unescape(name).replace("+", " ");
+		wert = unescape(wert).replace("+", " ");
+		this[name] = wert;
+		
+	}
+	
+}
+var liste = new getReferer(location.search);
+
+document.write("<script src='src/var/"+ liste.x + ".js' type='text/javascript'><\/script>");
+
+function config()
+{
+	window.location.href = "src/config.html"+ location.search , "_self";
+	alert(location.search);
+}
+</script>
+
+
+<div class="appleIPadMiniViewport" width="1024px" height="768px">
+<div id="a1" class="a1 blau font no-shadow">
+</div>
+<div id="a1overlay" class="a1c" style="z-index:999;">
+<div style='top:10px; left:10px; position:fixed;'><a href='hauptgruppen.html'><img src='img/sym/Pfeil_links_obenw.png' width='40px' height='40px' alt='Zurück'></a></img></div>
+<div style='top:10px; left:329px; position:fixed;'><a href='#' onClick='config(); return false'><img src='img/sym/wrench.png' width='40px' height='40px' alt='Einstellungen'></a></img></div>
+</div>
+<div id="a2" class="a2 blau font small no-shadow">
+</div>
+<div id="a2overlay" class="a2c" style="z-index:999;">
+</div>
+
+
+<!--<div id="b1" class="b1 blau font no-shadow"></div>-->
+<div id="b2" class="b2 blau font no-shadow"></div>
+<div id="boverlay" class="b2c" style="z-index:999;">
+</div>
+<!--<div id="b3" class="b3 blau font no-shadow"></div>-->
+
+
+</div>
+<script>
+var spare = "";
+
+var a1html = "";
+var a2html0 = "";
+var a2html1 = "<b>H-S&auml;tze:</b><br>";
+var a2html2 = "<b>P-S&auml;tze:</b><br>";
+var a2html3 = "";
+var bhtml1 = "";
+var bhtml0 = "";
+var bhtml2 = "";
+var b3html = "";
+
+var N = 3;
+var n = 0;
+
+var M = 2;
+var m = 0;
+
+var c = false;
+var e = false;
+var f = false;
+var n = false;
+var o = false;
+var t = false;
+var x = false;
+var Xi = false;
+
+// A1
+//a1html = a1html + a[0]
+//a1html = a1html + "<div style='margin-top:50px;font-size:700%;'><center>" + a[1] + "</center></div>";
+a1html = a1html + "<center><table border='0' cellspacing='0' cellpadding='0' style='color:#FFFFFF;'><tr height='93'><td style='vertical-align:bottom;'>" + a[0] + "</td></tr><tr height='187' text-align='center'><td style='font-size:150px'>" + a[1] + "</font></td></tr><tr height='93'><td style='vertical-align:top;'>" + a[9] + "</td></tr></table></center>";
+// A2
+if(h.length > 0)
+{
+	for (var i = 0; i < h.length; i++)
+	{
+		if (((h[i] >= 310 && h[i] <= 314) || h[i] == 290) && !c)
+		{
+			c = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_C.svg.png' width='124px' height='124px' alt='Hazard C'></img>";
+		}
+		else if (((h[i] >= 200 && h[i] <= 205) || h[i] == 240 || h[i] == 241 || h[i] == 271 || h[i] == 280) && !e)
+		{
+			e = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_E.svg.png' width='124px' height='124px' alt='Hazard E'></img>";
+		}
+		else if ((h[i] >= 203 && h[i] <= 272) && !f)
+		{
+			f = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_F.svg.png' width='124px' height='124px' alt='Hazard F'></img>";
+		}		
+		else if ((h[i] >= 400 && h[i] <= 420) && !n)
+		{
+			n = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_N.svg.png' width='124px' height='124px' alt='Hazard N'></img>";
+		}
+		else if ((h[i] >= 270 && h[i] <= 272) && !o)
+		{
+			o = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_O.svg.png' width='124px' height='124px' alt='Hazard O'></img>";
+		}
+		else if ((h[i] == 301 || h[i] == 311 || h[i] == 331) && !t)
+		{
+			t = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_T.svg.png' width='124px' height='124px' alt='Hazard T'></img>";
+		}
+		else if (((h[i] >= 300 && h[i] <= 373 && h[i] != 315 && h[i] != 316 && h[i] != 317) && !x))
+		{
+			x = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_X.svg.png' width='124px' height='124px' alt='Hazard Xn'></img>";
+		}
+		else if (((h[i] >= 315 && h[i] <= 317) && !Xi))
+		{
+			Xi = true;
+			a2html0 = a2html0 + "<img src='img/haz/Hazard_Xi.svg.png' width='124px' height='124px' alt='Hazard Xi'></img>";
+		}
+		
+	}
+	//1 H-Sätze
+	a2html1 = a2html1 + "<table border='0' cellspacing='0' rules='rows' width='100%'><tbody>";
+	for (var i = 0; i < h.length; i++)
+	{
+		a2html1 = a2html1 + "<tr><td>" + hs[h[i]] + "</td></tr>";
+	}
+	a2html1 = a2html1 + "</tbody></table>";
+}
+	//2 P-Sätze
+if(p.length > 0)
+{	
+	a2html2 = a2html2 + "<table border='0' cellspacing='0' rules='rows' width='100%'><tbody>";
+	for (var i = 0; i < p.length; i++)
+	{
+		a2html2 = a2html2 + "<tr><td>" + ps[p[i]] + "</td></tr>";
+	}
+	a2html2 = a2html2 + "</tbody></table>";
+}
+	
+	a2html3 = a2html3 + "<img src='img/pre/" + a[0] + ".jpg' width='379px' height='374px' alt='Keine Vorschau vorhanden.'></img>";	
+	
+
+	
+	//a2html1 = a2html1 + "<div id='a2img' width='379px' height='374px' style='background-image:url(img/pre/" + a[0] + ".jpg); width:379px; height:374px;'></div>";
+// B1
+bhtml1 = "<table border='0' cellspacing='0' rules='rows' width='100%'>";
+for(var i = 0; i < a.length; i++)
+{
+	if( i == 0 || i == 9 || i == 15 || i == 16 || i == 17 || i == 18 || i == 19 || i == 20 || i == 21 || i == 22 || i == 23 || i == 24 || i == 28 || i == 29 || i == 30 || i == 34 || i == 35 || i == 36 || i == 37 || i == 38)
+	{
+		spare = a[i];
+		if( (i == 29 || i == 30) && getCookie("a") == "c")
+		{
+			spare = Math.round(a[i] - 273);
+			b1[i] = "&deg;C";
+		}
+		else if(i == 9 && getCookie("m") == "kg")
+		{
+			spare = (Math.round(a[i] * 1.660538921 * 100)/100) + "*10^(-27)";
+			b1[i] = "kg";
+		}
+		bhtml1 = bhtml1 + "<tr><td>" + b[i] + "</td>" +
+		"<td><font color='#ffffff'><code>" + spare + " " + b1[i] + "</code></font></td></tr>";
+	}
+}
+bhtml1 = bhtml1 + "</table>";
+
+//table B2
+bhtml0 = "<table border='0' cellspacing='0' rules='rows' width='100%'>";
+for(var i = 0; i < a.length; i++)
+{
+	if( i == 2 || i == 6 || i == 7 || i == 8 || i == 10 || i == 11 || i == 12 || i == 13 || i == 14 || i == 29 || i == 30 || i == 31 || i == 39)
+	{
+		spare = a[i];
+		if( (i == 29 || i == 30) && getCookie("a") == "c")
+		{
+			spare = Math.round(a[i] - 273);
+			b1[i] = "&deg;C";
+		}
+		else if(i == 9 && getCookie("m") == "kg")
+		{
+			spare = (Math.round(a[i] * 1.660538921 * 100)/100) + "*10^(-27)";
+			b1[i] = "kg";
+		}
+		else if(i == 11 && a[i] < 0)
+		{
+			spare = Math.abs(a[i]);
+			b1[i] = "v. Chr.";
+		}
+		bhtml0 = bhtml0 + "<tr><td>" + b[i] + "</td>" +
+		"<td><font color='#ffffff'><code>" + spare + " " + b1[i] + "</code></font></td></tr>";
+	}
+}
+bhtml0 = bhtml0 + "</table>";
+
+//config table b3/2
+
+bhtml2 = "<table border='0' cellspacing='0' rules='rows' width='100%'>";
+for(var i = 0; i < a.length; i++)
+{
+	if(getCookie(i) == "+")
+	{
+		spare = a[i];
+		if( (i == 29 || i == 30) && getCookie("a") == "c")
+		{
+			spare = Math.round(a[i] - 273);
+			b1[i] = "&deg;C";
+		}
+		else if(i == 9 && getCookie("m") == "kg")
+		{
+			spare = (Math.round(a[i] * 1.660538921 * 100)/100) + "*10^(-27)";
+			b1[i] = "kg";
+		}
+		bhtml2 = bhtml2 + "<tr><td>" + b[i] + "</td>" +
+		"<td><font color='#ffffff'><code>" + spare + " " + b1[i] + "</code></font></td></tr>";
+	}	
+}
+bhtml2 = bhtml2 + "</table>";
+
+changeText('a1',a1html);
+changeText('a2',a2html0);
+changeText('b2',bhtml0);
+
+var color = "";
+
+if(liste.c != undefined)
+//if(liste.c == "braun" || liste.c == "lila" || liste.c == "gruen" || liste.c == "orange" || liste.c == "blau" || liste.c == "gelb")
+{
+	$(".a1").toggleClass("blau", false);
+	$(".a2").toggleClass("blau", false);
+	$(".b2").toggleClass("blau", false);
+
+	$(".a1").toggleClass(liste.c, true);
+	$(".a2").toggleClass(liste.c, true);
+	$(".b2").toggleClass(liste.c, true);
+}
+
+	var element = document.getElementById('a2overlay');
+	Hammer(element).on("swipeleft", function(event) {
+	var text = "";
+	n = n - (-1);
+	if (n > N)
+	{
+		n = 0;
+	}
+	
+		 if (n == 0)
+	{
+	 text = a2html0;
+	}
+	else if (n == 1)
+	{
+	 text = a2html1;
+	}
+	else if (n == 2)
+	{
+	 text = a2html2;
+	}
+	else if (n == 3)
+	{
+	 text = a2html3;
+	}
+		changeText('a2',text);
+		
+    });
+	Hammer(element).on("swiperight", function(event) {
+	var text = "";
+
+	n = n - 1;
+	if (n < 0)
+	{
+		n = N;
+	}
+	
+		 if (n == 0)
+	{
+	 text = a2html0;
+	}
+	else if (n == 1)
+	{
+	  text = a2html1;
+	}
+	else if (n == 2)
+	{
+	 text = a2html2;
+	}
+	else if (n == 3)
+	{
+	 text = a2html3;
+	}
+		changeText('a2',text);
+
+    });
+	
+	
+	
+	var element = document.getElementById('boverlay');
+	Hammer(element).on("swipeleft", function(event) {
+	var text = "";
+	m = m + 1;
+	if (m > M)
+	{
+		m = 0;
+	}
+	if (m == 0)
+	{
+	 text = bhtml0;
+	}
+	else if (m == 1)
+	{
+	 text = bhtml1;
+	}
+	else if (m == 2)
+	{
+	 text = bhtml2;
+	}
+		changeText('b2',text);
+		
+    });
+	Hammer(element).on("swiperight", function(event) {
+	var text = "";
+
+	m = m - 1;
+	if (m < 0)
+	{
+		m = M;
+	}
+	if (m == 0)
+	{
+	 text = bhtml0;
+	}
+	else if (m == 1)
+	{
+	 text = bhtml1;
+	}
+	else if (m == 2)
+	{
+	 text = bhtml2;
+	}
+		changeText('b2',text);
+
+    });
+	
+	var element = document.getElementById('a1overlay');
+	Hammer(element).on("swipeleft", function(event) {
+	var o = a[0] + 1;
+		window.location.href = "details3.html?x=" + o + "&c=" + liste.c, "_self";
+    });
+	Hammer(element).on("swiperight", function(event) {
+	var o = a[0] - 1;
+		window.location.href = "details3.html?x=" + o + "&c=" + liste.c, "_self";
+    });
+	Hammer(element).on("swipedown", function(event) {
+		window.location.href = "hauptgruppen.html", "_self";
+    });
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Translation//EN">
+<html>
+<head>
+<title>Detailansicht</title>
+<meta name="publisher" content="Fabian Wiesmann">
+<meta name="copyright" content="Fabian Wiesmann">
+<meta name="page-topic" content="PSE">
+<meta name="author" content="Fabian Wiesmann">
+<meta name="language" content="de">
+<script src="js\jquery-ui-1.10.1.custom\js\jquery.min.js"></script>
+<script src="js\hammer.js-master/dist/hammer.js"></script>
+<link rel="stylesheet" href="css\PSE.css" />
+<link rel="stylesheet" href="css\detail.css" />
+</head>
+
+<body class="main" bgcolor="#000000">
+
+<script type="text/JavaScript">
+function getReferer (str) 
+{
+	if(str == '') return;
+	var wstr = str.slice(1);
+	var paare = wstr.split("&");
+	var paar, name, wert;
+	for (var i = 0; i < paare.length; i++)
+	{
+		paar = paare[i].split('=');
+		name = paar[0];
+		wert = paar[1];
+		name = unescape(name).replace("+", " ");
+		wert = unescape(wert).replace("+", " ");
+		this[name] = wert;
+	}
+}
+var liste = new getReferer(location.search);
+document.write("<script src='"+ liste.x + ".js' type='text/javascript'><\/script>");
+</script>
+
+<div class="appleIPadMiniViewport" width="1024px" height="768px">
+
+
+<div class="a1 blau font">
+</div>
+<div class="a2 blau font">
+
+</div>
+
+
+<div id="b1" class="b1 blau font">
+<script type="text/javascript">document.write("<br><br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+atomname+"</b>");
+</script>
+</div>
+<div id="b2"  class="b2 blau font">
+<script type="text/javascript">document.write("<br><br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+atomname+"</b>");
+</script>
+</div>
+<div id="b3" class="b3 blau font">
+<script type="text/javascript">document.write("<br><br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+atomname+"</b>");
+</script>
+</div>
+
+
+</div>
+
+<script>
+	//document.getElementById("div2").innerHTML = "<br><br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + atomname + "</b>";
+</script>
+<script>
+
+	var element = document.getElementById('b1');
+    Hammer(element).on("swipeup", function(event) {
+		$(".b1").toggleClass("slideoutup", true);
+        $(".b2").toggleClass("slideindown", true);
+    });
+	Hammer(element).on("swipedown", function(event) {
+	
+	
+    });
+	
+	
+	
+		var element = document.getElementById('b2');
+    Hammer(element).on("swipeup", function(event) {
+        $(".b2").toggleClass("slideoutup", true);
+		$(".b3").toggleClass("slideindown", true);
+    });
+	Hammer(element).on("swipedown", function(event) {
+		$(".b1").toggleClass("slideinup", true);
+		$(".b2").toggleClass("slideoutdown", true);
+    });
+		
+	
+	
+		var element = document.getElementById('b3');
+    Hammer(element).on("swipeup", function(event) {
+	
+	
+    });	
+	Hammer(element).on("swipedown", function(event) {
+		$(".b2").toggleClass("slideinup", true);
+		$(".b3").toggleClass("slideoutdown", true);
+    });
+</script>
+
+
+</body>
+</html>

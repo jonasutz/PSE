@@ -1,0 +1,843 @@
+<!DOCTPYE html>
+<html manifest="periodensystem.manifest">
+<head>
+<title>PSE-minar Chemie</title>
+	 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	 <script src='jquery.min.js' type='text/javascript'></script>
+	 <style type="text/css">
+		html,body { height:100%; margin:0; padding:0; text-align:center;background-color:silver; }
+		div#center {height:100%; width:760px; margin: 0 auto 0 auto;}
+		
+		
+		
+		
+		
+		
+		
+		.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+	background-color:#f24537;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:white;
+	font-family:arial;
+	font-size:1.3em;
+	padding:6px 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #810e05;
+	width:70px;
+	height:70px;
+	text-align:left;
+	position:relative
+}.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+	background-color:#c62d1f;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+
+
+.braun {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+	background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+	background-color:#ffc477;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	color:white;
+	font-family:arial;
+	font-size:1.3em;
+	padding:6px 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #a67833;
+	width:70px;
+	height:70px;
+	text-align:left;
+}.braun:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
+	background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
+	background-color:#fb9e25;
+}.braun:active {
+	position:relative;
+	top:1px;
+}
+
+
+.lila {
+	-moz-box-shadow:inset 0px 1px 0px 0px #e184f3;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #e184f3;
+	box-shadow:inset 0px 1px 0px 0px #e184f3;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c123de), color-stop(1, #a20dbd) );
+	background:-moz-linear-gradient( center top, #c123de 5%, #a20dbd 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c123de', endColorstr='#a20dbd');
+	background-color:#c123de;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #a511c0;
+	display:inline-block;
+	color:white;
+	font-family:arial;
+	font-size:1.3em;
+	padding:6px 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #9b14b3;
+	width:70px;
+	height:70px;
+	text-align:left;
+}.lila:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c123de) );
+	background:-moz-linear-gradient( center top, #a20dbd 5%, #c123de 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd', endColorstr='#c123de');
+	background-color:#a20dbd;
+}.lila:active {
+	position:relative;
+	top:1px;
+}
+
+
+.gruen {
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #268a16;
+	display:inline-block;
+	color:white;
+	font-family:arial;
+	font-size:1.3em;
+	padding:6px 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #aade7c;
+	width:70px;
+	height:70px;
+	text-align:left;
+}.gruen:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
+}.gruen:active {
+	position:relative;
+	top:1px;
+}
+
+.orange {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e) );
+	background:-moz-linear-gradient( center top, #f0c911 5%, #f2ab1e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f2ab1e');
+	background-color:#f0c911;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #e65f44;
+	display:inline-block;
+	color:white;
+	font-family:arial;
+	font-size:1.3em;
+	padding:6px 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ded17c;
+	width:70px;
+	height:70px;
+	text-align:left;
+}.orange:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911) );
+	background:-moz-linear-gradient( center top, #f2ab1e 5%, #f0c911 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911');
+	background-color:#f2ab1e;
+}.orange:active {
+	position:relative;
+	top:1px;
+}
+
+
+.blau {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color:#63b8ee;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	color:white;
+	font-family:arial;
+	font-size:1.3em;
+	padding:6px 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #7cacde;
+	width:70px;
+	height:70px;
+	text-align:left;
+}.blau:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color:#468ccf;
+}.blau:active {
+	position:relative;
+	top:1px;
+}
+
+.gelb {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffdf0d), color-stop(1, #fff826) );
+	background:-moz-linear-gradient( center top, #ffdf0d 5%, #fff826 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdf0d', endColorstr='#fff826');
+	background-color:#ffdf0d;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	color:white;
+	font-family:arial;
+	font-size:1.3em;
+	padding:6px 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffee66;
+	width:70px;
+	height:70px;
+	text-align:left;
+}.gelb:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff826), color-stop(1, #ffdf0d) );
+	background:-moz-linear-gradient( center top, #fff826 5%, #ffdf0d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff826', endColorstr='#ffdf0d');
+	background-color:#fff826;
+}.gelb:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+.overlay {
+position: fixed;
+z-index:199;
+top: 0px;
+left: 0px;
+height:100%;
+width:100%;
+opacity:0.5;
+}
+
+
+
+.textBeschriftung {
+	color:#ffffff;
+	font-family:arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:20px 21px;
+	text-shadow:1px 1px 0px #9E9999;
+	}
+	
+	.appleIPadMiniViewport{
+	border: 2px solid #FFFFFF;
+	width: 1024px;
+	height: 768px;
+}
+
+
+.textModal {
+	color:#000000
+	font-family:arial;
+	font-size:30px;
+	font-weight:bold;
+	padding:20px 21px;
+	text-shadow: 1px 1px 0px #9E9999;
+
+}
+
+
+/* Z-index of #mask must lower than #boxes .window */
+#mask {
+  position:absolute;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  position:fixed;
+  width:440px;
+  height:400px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  background: #FFFFFF
+}
+
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog1 #dialog7 {
+  width:375px; 
+  height:203px;
+  background:white;
+}
+
+appleIPadMiniViewport
+{
+color:#000000
+height:768px;
+width:1024px;
+padding:2px;
+}
+
+
+.bl{
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:15px;
+font-weight:normal;
+color: #0050A0;
+background-color:#FFFFFF;
+line-height:130%;
+}
+
+
+
+.modalButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}.modalButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.modalButton:active {
+	position:relative;
+	top:1px;
+}
+
+.captionFont{
+font-family:arial;
+font-size:0.6em;
+color:#000000:
+}
+
+.td
+{ 
+break-word: word-wrap; 
+align: center;
+}
+	 </style>
+	 
+</head>
+</style>
+
+
+         <style>
+
+         </style>
+         <script type="text/javascript">
+                document.documentElement.className += ' js';
+         </script>
+
+         
+
+
+         <script>
+
+$(document).ready(function() {
+	
+	MarkierenAn = new Boolean(false);
+	    //select all the a tag with name equal to modal
+    $('a[name=modal]').click(function(e)
+    {
+		
+        //Cancel the link behavior
+        e.preventDefault();
+        //Get the A tag
+        var id = $(this).attr('href');
+        //var idx = $(this).attr('tabindex');
+		//alert(idx);
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+        //transition effect
+        $('#mask').fadeIn(250);
+        $('#mask').fadeTo("fast",0.8);
+
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+
+        //Set the popup window to center
+        $(id).css('top',  winH/2-$(id).height()/2);
+        $(id).css('left', winW/2-$(id).width()/2);
+		if(MarkierenAn == false)
+		{
+        //transition effect
+        $(id).fadeIn(1000);
+        
+		}
+		
+		else
+		{
+		 var str = $(this).attr('href');
+		 var cstr = str.substr(7);
+		 highlightX(cstr);
+		 
+		}
+    });
+
+    
+    $('.window .close').click(function (e) {
+        //Cancel the link behavior
+        e.preventDefault();
+        $('#mask, .window').hide();
+    });
+
+    //if mask is clicked
+    $('#mask').click(function () {
+        $(this).hide();
+        $('.window').hide();
+        document.location.reload();
+
+    });
+
+});
+
+	function highlightH(parameterH)
+	{
+		var startH = parameterH+1;
+		var stopH = parameterH+9;
+		for(var i = startH;i<stopH;i++)
+		{
+			
+			document.getElementsByName(i.toString())[0].style.zIndex="10400";
+		} 
+	}
+	
+	function highlightV(parameterV)
+	{
+		var startV = parameterV+10;
+		var stopV = parameterV+80;
+		for(var i = startV;i<stopV;i=i+10)
+		{
+			
+			document.getElementsByName(i.toString())[0].style.zIndex="10400";
+		} 
+	}
+	
+	function highlightX(parameterX)
+	{
+		document.getElementsByName(parameterX)[0].style.zIndex="10400";
+	}
+	
+
+
+
+</script>
+
+<script type="text/javascript">
+
+	
+	
+	
+	
+	function highlightH(parameterH)
+	{
+		var startH = parameterH+1;
+		var stopH = parameterH+9;
+		for(var i = startH;i<stopH;i++)
+		{
+			
+			document.getElementsByName(i.toString())[0].style.zIndex="10400";
+		} 
+	}
+	
+	function highlightV(parameterV)
+	{
+		var startV = parameterV+10;
+		var stopV = parameterV+80;
+		for(var i = startV;i<stopV;i=i+10)
+		{
+			
+			document.getElementsByName(i.toString())[0].style.zIndex="10400";
+		} 
+	}
+	
+	function highlightX(parameterX)
+	{
+		document.getElementsByName(parameterX)[0].style.zIndex="10400";
+	}
+	
+	function setColor(parameterX)
+	{
+		alert(parameterX);
+	//	documment.getElementsByName(parameterX)[0].style.background-color="#FFFFFF";
+		
+	}
+	
+	function showInfo(tit,onz,sym,mas,ser,agg,spt,sip)
+	{
+		
+		document.writeln("<div class='textModal'><color=#000000s>" + tit + "</color></div>");
+                        document.writeln("<div>");
+                                document.writeln("<table class='bl'>");
+                                document.writeln("<tr><th align='right'>Ordnungszahl:</th><td>" + onz.toString() + "</td></tr>");
+                                document.writeln("<tr><th align='right'>Symbol:</th><td>" + sym + "</td></tr>");
+								document.writeln("<tr><th align='right'>Atommasse :</th><td>" + mas + "</td></tr>");
+								document.writeln("<tr><th align='right'>Serie :</th><td>" + ser + "</td></tr>");
+								document.writeln("<tr><th align='right'>Aggregatszustand:</th><td>" + agg + "</td></tr>");
+								document.writeln("<tr><th align='right'>Schmelzpunkt:</th><td>" + spt +"</td></tr>");
+								document.writeln("<tr><th align='right'>Siedepunkt:</th><td>" + sip +"</td></tr>");
+								document.writeln("<tr></tr>");
+								document.writeln("<tr></tr>");
+								document.writeln("<tr></tr>");
+                                document.writeln("</table>");
+                        document.writeln("</div>");
+
+                        document.writeln("<a href='details3.html?x=" + onz + "' class='modalButton'>Mehr Details</a>");
+
+                        document.writeln("<br><br><br><br><button class='close' style='modalButton' href='#'>Schlie&szlig;en</button>");
+	}
+	
+	function BooleanAendern() // muss bei Klick auf markierenButton ausgeführt werden 
+	{
+		if (MarkierenAn == true)
+		{
+			MarkierenAn = false;
+		}
+		
+		if (MarkierenAn == false)
+		{
+			MarkierenAn = true;
+		}
+	}
+	
+	function reloadOnBug()
+	{
+		document.location.reload();
+	}
+	
+</script>	
+<body>
+	<div id="mask"></div>
+	<div id="appleIPadMiniViewport" width="1024px" height="768px">
+	<table cellspacing="0" cellpadding="1">
+		<tr><td></td></tr>
+		<tr>
+			<td><div class="textBeschriftung">Periode</div></td> 
+			<td><div class="textBeschriftung">I</div></td>
+			<td><div class="textBeschriftung">II</div></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><div class="textBeschriftung">III</div></td>
+			<td><div class="textBeschriftung">IV</div></td>
+			<td><div class="textBeschriftung">V</div></td>
+			<td><div class="textBeschriftung">VI</div></td>
+			<td><div class="textBeschriftung">VII</div></td>
+			<td><div class="textBeschriftung">VIII</div></td>
+		</tr>
+		
+		<tr> <!-- Zeile 1 ( H + He) -->
+				<td><div class="textBeschriftung">&nbsp;&nbsp;&nbsp;1</div></td>
+				<td><a href="#dialog11" name="modal"><button name="11" class="braun"><div style="font-size:0.6em">1</div>&nbsp;&nbsp;&nbsp;H<div style="font-size:0.6em">1</div></button> </a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="#dialog18" name="modal"><button name="18" class="braun" ><div style="font-size:0.6em">2</div>&nbsp;&nbsp;&nbsp;He<div style="font-size:0.6em">4</div></button></a></td>
+		</tr>
+		
+		<tr> <!-- Zeile 2 (LiBeBCNOFNe) -->
+				<td><div class="textBeschriftung">&nbsp;&nbsp;&nbsp;2</div></td>
+				<td><a href="#dialog21" name="modal"><button name="21" class="lila" ><div style="font-size:0.6em">7</div>&nbsp;&nbsp;&nbsp;Li<div style="font-size:0.6em">3</div></button></a></td>
+                <td><a href="#dialog22" name="modal"><button name="22" class="lila" ><div style="font-size:0.6em">9</div>&nbsp;&nbsp;&nbsp;Be<div style="font-size:0.6em">4</div></button></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="#dialog23" name="modal"><button name="23" class="lila" ><div style="font-size:0.6em">11</div>&nbsp;&nbsp;&nbsp;B<div style="font-size:0.6em">5</div></button></a></td>
+                <td><a href="#dialog24" name="modal"><button name="24" class="lila" ><div style="font-size:0.6em">12</div>&nbsp;&nbsp;&nbsp;C<div style="font-size:0.6em">6</div></button></a></td>
+                <td><a href="#dialog25" name="modal"><button name="25" class="lila" ><div style="font-size:0.6em">14</div>&nbsp;&nbsp;&nbsp;N<div style="font-size:0.6em">7</div></button></a></td>
+                <td><a href="#dialog26" name="modal"><button name="26" class="lila" ><div style="font-size:0.6em">16</div>&nbsp;&nbsp;&nbsp;O<div style="font-size:0.6em">8</div></button></a></td>
+                <td><a href="#dialog27" name="modal"><button name="27" class="lila" ><div style="font-size:0.6em">19</div>&nbsp;&nbsp;&nbsp;F<div style="font-size:0.6em">9</div></button></a></td>
+				<td><a href="#dialog28" name="modal"><button name="28" class="lila" ><div style="font-size:0.6em">10</div>&nbsp;&nbsp;&nbsp;Ne<div style="font-size:0.6em">10</div></button></a></td>
+		</tr>
+		
+		<tr> <!-- Zeile 3 (NaMgAlSiPSClAr) -->
+				<td><div class="textBeschriftung">&nbsp;&nbsp;&nbsp;3</div></td>
+				<td><a href="#dialog31" name="modal"><button name="31" class="gruen" ><div style="font-size:0.6em">23</div>&nbsp;&nbsp;&nbsp;Na<div style="font-size:0.6em">11</div></button></a></td>
+                <td><a href="#dialog32" name="modal"><button name="32" class="gruen" ><div style="font-size:0.6em">24</div>&nbsp;&nbsp;&nbsp;Mg<div style="font-size:0.6em">12</div></button></a></td>
+				<td><div class="textBeschriftung">IIIb</div></td>
+				<td><div class="textBeschriftung">IVb</div></td>
+				<td><div class="textBeschriftung">Vb</div></td>
+				<td><div class="textBeschriftung">VIb</div></td>
+				<td><div class="textBeschriftung">VIIb</div></td>
+				<td><div class="textBeschriftung">VIIb</div></td>
+				<td><div class="textBeschriftung">VIIb</div></td>
+				<td><div class="textBeschriftung">VIIb</div></td>
+				<td><div class="textBeschriftung">Ib</div></td>
+				<td><div class="textBeschriftung">IIb</div></td>
+				<td><a href="#dialog33" name="modal"><button name="33" class="gruen" ><div style="font-size:0.6em">27</div>&nbsp;&nbsp;&nbsp;Al<div style="font-size:0.6em">13</div></button></a></td>
+                <td><a href="#dialog34" name="modal"><button name="34" class="gruen" ><div style="font-size:0.6em">28</div>&nbsp;&nbsp;&nbsp;Si<div style="font-size:0.6em">14</div></button></a></td>
+                <td><a href="#dialog35" name="modal"><button name="35" class="gruen" ><div style="font-size:0.6em">31</div>&nbsp;&nbsp;&nbsp;P<div style="font-size:0.6em">15</div></button></a></td>
+                <td><a href="#dialog36" name="modal"><button name="36" class="gruen" ><div style="font-size:0.6em">32</div>&nbsp;&nbsp;&nbsp;S<div style="font-size:0.6em">16</div></button></a></td>
+                <td><a href="#dialog37" name="modal"><button name="37" class="gruen" ><div style="font-size:0.6em">35</div>&nbsp;&nbsp;&nbsp;Cl<div style="font-size:0.6em">17</div></button></a></td>
+                <td><a href="#dialog38" name="modal"><button name="38" class="gruen" ><div style="font-size:0.6em">40</div>&nbsp;&nbsp;&nbsp;Na<div style="font-size:0.6em">18</div></button></a></td>
+		</tr>
+		
+		<tr> <!-- Zeile 4 (KCaGaSIAsSeBrKr) -->
+				<td><div class="textBeschriftung">&nbsp;&nbsp;&nbsp;4</div></td>
+				<td><a href="#dialog41" name="modal"><button name="41" class="orange" ><div style="font-size:0.6em">39</div>&nbsp;&nbsp;&nbsp;K<div style="font-size:0.6em">19</div></button></a></td>
+                <td><a href="#dialog42" name="modal"><button name="42" class="orange" ><div style="font-size:0.6em">40</div>&nbsp;&nbsp;&nbsp;Ca<div style="font-size:0.6em">20</div></button></a></td>
+				<td><a href="#dialog034" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">45</div>&nbsp;&nbsp;&nbsp;Sc<div style="font-size:0.6em">21</div></button></a></td>
+				<td><a href="#dialog044" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">48</div>&nbsp;&nbsp;&nbsp;Ti<div style="font-size:0.6em">22</div></button></a></td>
+				<td><a href="#dialog054" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">51</div>&nbsp;&nbsp;&nbsp;V<div style="font-size:0.6em">23</div></button></a></td>
+				<td><a href="#dialog064" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">52</div>&nbsp;&nbsp;&nbsp;Cr<div style="font-size:0.6em">24</div></button></a></td>
+				<td><a href="#dialog074" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">55</div>&nbsp;&nbsp;&nbsp;Mn<div style="font-size:0.6em">25</div></button></a></td>
+				<td><a href="#dialog084" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">56</div>&nbsp;&nbsp;&nbsp;Fe<div style="font-size:0.6em">26</div></button></a></td>
+				<td><a href="#dialog094" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">59</div>&nbsp;&nbsp;&nbsp;Co<div style="font-size:0.6em">27</div></button></a></td>
+				<td><a href="#dialog104" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">59</div>&nbsp;&nbsp;&nbsp;Ni<div style="font-size:0.6em">28</div></button></a></td>
+				<td><a href="#dialog114" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">64</div>&nbsp;&nbsp;&nbsp;Cu<div style="font-size:0.6em">29</div></button></a></td>
+				<td><a href="#dialog124" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">65</div>&nbsp;&nbsp;&nbsp;Zn<div style="font-size:0.6em">30</div></button></a></td>
+				<td><a href="#dialog43" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">70</div>&nbsp;&nbsp;&nbsp;Ga<div style="font-size:0.6em">31</div></button></a></td>
+				<td><a href="#dialog44" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">73</div>&nbsp;&nbsp;&nbsp;Ge<div style="font-size:0.6em">32</div></button></a></td>
+				<td><a href="#dialog45" name="modal"><button name="??" class="orange" ><div style="font-size:0.6em">75</div>&nbsp;&nbsp;&nbsp;As<div style="font-size:0.6em">33</div></button></a></td>
+				<td><a href="#dialog46" name="modal"><button name="46" class="orange" ><div style="font-size:0.6em">79</div>&nbsp;&nbsp;&nbsp;Se<div style="font-size:0.6em">34</div></button></a></td>
+                <td><a href="#dialog47" name="modal"><button name="47" class="orange" ><div style="font-size:0.6em">80</div>&nbsp;&nbsp;&nbsp;Br<div style="font-size:0.6em">35</div></button></a></td>
+                <td><a href="#dialog48" name="modal"><button name="48" class="orange" ><div style="font-size:0.6em">84</div>&nbsp;&nbsp;&nbsp;Kr<div style="font-size:0.6em">36</div></button></a></td>
+		</tr>
+		
+		<tr> <!-- Z5 -->
+				<td><div class="textBeschriftung">&nbsp;&nbsp;&nbsp;5</div></td>
+				<td><a href="#dialog51" name="modal"><button name="51" class="blau" ><div style="font-size:0.6em">85</div>&nbsp;&nbsp;&nbsp;Rb<div style="font-size:0.6em">37</div></button></a></td>
+                <td><a href="#dialog52" name="modal"><button name="52" class="blau" ><div style="font-size:0.6em">86</div>&nbsp;&nbsp;&nbsp;Sr<div style="font-size:0.6em">38</div></button></a></td>
+				<td><a href="#dialog035" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">89</div>&nbsp;&nbsp;&nbsp;Y<div style="font-size:0.6em">39</div></button></a></td>
+				<td><a href="#dialog045" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">91</div>&nbsp;&nbsp;&nbsp;Zr<div style="font-size:0.6em">40</div></button></a></td>
+				<td><a href="#dialog055" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">93</div>&nbsp;&nbsp;&nbsp;Nb<div style="font-size:0.6em">41</div></button></a></td>
+				<td><a href="#dialog065" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">96</div>&nbsp;&nbsp;&nbsp;Mo<div style="font-size:0.6em">42</div></button></a></td>
+				<td><a href="#dialog075" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">98</div>&nbsp;&nbsp;&nbsp;Tc<div style="font-size:0.6em">43</div></button></a></td>
+				<td><a href="#dialog085" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">101</div>&nbsp;&nbsp;&nbsp;Ru<div style="font-size:0.6em">44</div></button></a></td>
+				<td><a href="#dialog095" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">103</div>&nbsp;&nbsp;&nbsp;Rh<div style="font-size:0.6em">45</div></button></a></td>
+				<td><a href="#dialog105" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">106</div>&nbsp;&nbsp;&nbsp;Pd<div style="font-size:0.6em">46</div></button></a></td>
+				<td><a href="#dialog115" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">108</div>&nbsp;&nbsp;&nbsp;Ag<div style="font-size:0.6em">47</div></button></a></td>
+				<td><a href="#dialog125" name="modal"><button name="??" class="blau" ><div style="font-size:0.6em">112</div>&nbsp;&nbsp;&nbsp;Cd<div style="font-size:0.6em">48</div></button></a></td>
+				<td><a href="#dialog54" name="modal"><button name="53" class="blau" ><div style="font-size:0.6em">116</div>&nbsp;&nbsp;&nbsp;In<div style="font-size:0.6em">49</div></button></a></td>
+                <td><a href="#dialog55" name="modal"><button name="54" class="blau" ><div style="font-size:0.6em">119</div>&nbsp;&nbsp;&nbsp;Sn<div style="font-size:0.6em">50</div></button></a></td>
+                <td><a href="#dialog55" name="modal"><button name="55" class="blau" ><div style="font-size:0.6em">122</div>&nbsp;&nbsp;&nbsp;Sb<div style="font-size:0.6em">51</div></button></a></td>
+                <td><a href="#dialog56" name="modal"><button name="56" class="blau" ><div style="font-size:0.6em">128</div>&nbsp;&nbsp;&nbsp;Te<div style="font-size:0.6em">52</div></button></a></td>
+                <td><a href="#dialog57" name="modal"><button name="57" class="blau" ><div style="font-size:0.6em">127</div>&nbsp;&nbsp;&nbsp;I<div style="font-size:0.6em">53</div></button></a></td>
+                <td><a href="#dialog58" name="modal"><button name="58" class="blau" ><div style="font-size:0.6em">131</div>&nbsp;&nbsp;&nbsp;Xe<div style="font-size:0.6em">54</div></button></a></td>
+		</tr>
+		
+		<tr>
+				<td><div class="textBeschriftung">&nbsp;&nbsp;&nbsp;6</div></td>
+				<td><a href="#dialog61" name="modal"><button name="61" class="gelb" ><div style="font-size:0.6em">133</div>&nbsp;&nbsp;&nbsp;Cs<div style="font-size:0.6em">55</div></button></a></td>
+                <td><a href="#dialog62" name="modal"><button name="62" class="gelb" ><div style="font-size:0.6em">137</div>&nbsp;&nbsp;&nbsp;Ba<div style="font-size:0.6em">56</div></button></a></td>
+				<td></td>
+				<td><a href="#dialog046" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">178</div>&nbsp;&nbsp;&nbsp;Hf<div style="font-size:0.6em">72</div></button></a></td>
+				<td><a href="#dialog056" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">181</div>&nbsp;&nbsp;&nbsp;Ta<div style="font-size:0.6em">73</div></button></a></td>
+				<td><a href="#dialog066" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">184</div>&nbsp;&nbsp;&nbsp;W<div style="font-size:0.6em">74</div></button></a></td>
+				<td><a href="#dialog076" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">186</div>&nbsp;&nbsp;&nbsp;Re<div style="font-size:0.6em">75</div></button></a></td>
+				<td><a href="#dialog086" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">190</div>&nbsp;&nbsp;&nbsp;Os<div style="font-size:0.6em">76</div></button></a></td>
+				<td><a href="#dialog096" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">192</div>&nbsp;&nbsp;&nbsp;Ir<div style="font-size:0.6em">77</div></button></a></td>
+				<td><a href="#dialog106" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">195</div>&nbsp;&nbsp;&nbsp;Pt<div style="font-size:0.6em">78</div></button></a></td>
+				<td><a href="#dialog116" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">197</div>&nbsp;&nbsp;&nbsp;Au<div style="font-size:0.6em">79</div></button></a></td>
+				<td><a href="#dialog126" name="modal"><button name="??" class="gelb" ><div style="font-size:0.6em">201</div>&nbsp;&nbsp;&nbsp;Hg<div style="font-size:0.6em">80</div></button></a></td>
+				<td><a href="#dialog63" name="modal"><button name="63" class="gelb" ><div style="font-size:0.6em">204</div>&nbsp;&nbsp;&nbsp;Tl<div style="font-size:0.6em">81</div></button></a></td>
+                <td><a href="#dialog64" name="modal"><button name="64" class="gelb" ><div style="font-size:0.6em">207</div>&nbsp;&nbsp;&nbsp;Pb<div style="font-size:0.6em">82</div></button></a></td>
+                <td><a href="#dialog65" name="modal"><button name="65" class="gelb" ><div style="font-size:0.6em">209</div>&nbsp;&nbsp;&nbsp;Bi<div style="font-size:0.6em">83</div></button></a></td>
+                <td><a href="#dialog66" name="modal"><button name="66" class="gelb" ><div style="font-size:0.6em">210</div>&nbsp;&nbsp;&nbsp;Po<div style="font-size:0.6em">84</div></button></a></td>
+                <td><a href="#dialog67" name="modal"><button name="67" class="gelb" ><div style="font-size:0.6em">210</div>&nbsp;&nbsp;&nbsp;At<div style="font-size:0.6em">85</div></button></a></td>
+                <td><a href="#dialog68" name="modal"><button name="68" class="gelb" ><div style="font-size:0.6em">222</div>&nbsp;&nbsp;&nbsp;Rn<div style="font-size:0.6em">86</div></button></a></td>
+		</tr>
+		
+		<tr>
+				<td><div class="textBeschriftung">&nbsp;&nbsp;&nbsp;7</div></td>
+				<td><a href="#dialog71" name="modal"><button name="71" class="button" ><div style="font-size:0.6em">223</div>&nbsp;&nbsp;&nbsp;Fr<div style="font-size:0.6em">87</div></button></a></td>
+                <td><a href="#dialog72" name="modal"><button name="72" class="button" ><div style="font-size:0.6em">226</div>&nbsp;&nbsp;&nbsp;Ra<div style="font-size:0.6em">88</div></button></a></td>
+				<td></td>
+				<td><a href="#dialog047" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">263</div>&nbsp;&nbsp;&nbsp;Rf<div style="font-size:0.6em">104</div></button></a></td>
+                <td><a href="#dialog057" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">262</div>&nbsp;&nbsp;&nbsp;Db<div style="font-size:0.6em">105</div></button></a></td>
+				<td><a href="#dialog067" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">266</div>&nbsp;&nbsp;&nbsp;Sg<div style="font-size:0.6em">106</div></button></a></td>
+				<td><a href="#dialog077" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">264</div>&nbsp;&nbsp;&nbsp;Bh<div style="font-size:0.6em">107</div></button></a></td>
+				<td><a href="#dialog087" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">269</div>&nbsp;&nbsp;&nbsp;Hs<div style="font-size:0.6em">108</div></button></a></td>
+				<td><a href="#dialog097" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">268</div>&nbsp;&nbsp;&nbsp;Mt<div style="font-size:0.6em">109</div></button></a></td>
+				<td><a href="#dialog107" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">272</div>&nbsp;&nbsp;&nbsp;Ds<div style="font-size:0.6em">110</div></button></a></td>
+				<td><a href="#dialog117" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">272</div>&nbsp;&nbsp;&nbsp;Rg<div style="font-size:0.6em">111</div></button></a></td>
+				<td><a href="#dialog127" name="modal"><button name="??" class="button" ><div style="font-size:0.6em">277</div>&nbsp;&nbsp;&nbsp;Cn<div style="font-size:0.6em">112</div></button></a></td>
+				
+				
+		</tr>
+		
+		
+	</table>
+	<button class="modalButton"><a href="Hauptgruppen.html">Hauptgruppen</button>
+	
+	<div id="boxes">
+
+              
+                
+                <div id="dialog11" class="window"><script type="text/javascript">showInfo("Wasserstoff",1,"H","1,008u","Nichtmetalle","gasförmig","-259,14°C","-252°C")</script></div>
+				<div id="dialog18" class="window"><script type="text/javascript">showInfo("Helium",2,"He","4,00262u","Edelgase","gaförmig","-272,2°C","-269°C")</script></div>
+                <div id="dialog21" class="window"><script type="text/javascript">showInfo("Lithium",7,"Li","6,94u","Alkalimetalle","fest","180,54°C","1330°C")</script></div>
+				<div id="dialog22" class="window"><script type="text/javascript">showInfo("Beryllium",4,"Be","9,012u","Erdalkalimetalle","fest","1287°C","2969°C")</script></div>
+				<div id="dialog23" class="window"><script type="text/javascript">showInfo("Bor",5,"B","10,81u","Halbmetalle","fest","2076°C","3930°C")</script></div>
+				<div id="dialog24" class="window"><script type="text/javascript">showInfo("Kohlenstoff",6,"C","12,011u","Nichtmetalle","fest","XX","XX")</script></div>
+				<div id="dialog25" class="window"><script type="text/javascript">showInfo("Stickstoff",7,"N","14,00u","Nichtmetalle","gasförmig","-210,1°C","-196°C")</script></div>
+				<div id="dialog26" class="window"><script type="text/javascript">showInfo("Sauerstoff",8,"O","15,99u","Nichtmetalle","gasförmig","-218°C","-183°C")</script></div>
+				<div id="dialog27" class="window"><script type="text/javascript">showInfo("Fluor",9,"F","18,99u","Halogene","gasförmig","-219,62°C","-188°C")</script></div>
+				<div id="dialog28" class="window"><script type="text/javascript">showInfo("Neon",10,"Ne","20,1797u","Edelgase","gasförmig","-248,59°C","-246°C")</script></div>
+				<div id="dialog31" class="window"><script type="text/javascript">showInfo("Natrium",11,"Na","22,9897u","Alkalimetalle","fest","97,72°C", "890°C")</script></div>
+				<div id="dialog32" class="window"><script type="text/javascript">showInfo("Magnesium",12,"Mg","24,305u","Erdalkalimetalle","fest","650°C","1110°C")</script></div>
+				<div id="dialog33" class="window"><script type="text/javascript">showInfo("Aluminium",13,"Al","26,98u","Metalle","fest","660,32°C","2470°C")</script></div>
+				<div id="dialog34" class="window"><script type="text/javascript">showInfo("Silicium",14,"Si","28,085","Halbmetalle","fest","1410°C","3260°C")</script></div>
+				<div id="dialog35" class="window"><script type="text/javascript">showInfo("Phosphor",15,"P","30,973u","Nichtmetalle","fest","44,2°C","280°C")</script></div>
+				<div id="dialog36" class="window"><script type="text/javascript">showInfo("Schwefel",16,"S","32,06u","Nichtmetalle","fest","115,21°C","445°C")</script></div>
+				<div id="dialog37" class="window"><script type="text/javascript">showInfo("Chlor",17,"Cl","35,45u","Halogene","gasförmig","-101,5°C","-34,6°C")</script></div>
+				<div id="dialog38" class="window"><script type="text/javascript">showInfo("Argon",18,"Ar","39,948u","Edelgase","gasförmig","-189,3°C","-186°C")</script></div>
+				<div id="dialog41" class="window"><script type="text/javascript">showInfo("Kalium",19,"K","39,09u","Alkalimetalle","fest","63,38°C","774°C")</script></div>
+				<div id="dialog42" class="window"><script type="text/javascript">showInfo("Calcium",20,"Ca","40,078u","Erdalkalimetalle","fest","842°C","1487°C")</script></div>
+				<div id="dialog43" class="window"><script type="text/javascript">showInfo("Gallium",31,"Ga","69,723u","Metalle","fest","29,76°C","2400°C")</script></div>
+				<div id="dialog44" class="window"><script type="text/javascript">showInfo("Germanium",32,"Ge","72,63u","Halbmetalle","fest","938,3°C","2830°C")</script></div>
+				<div id="dialog45" class="window"><script type="text/javascript">showInfo("Arsen",33,"As","74,921u","Halbmetalle","fest","XX","XX")</script></div>
+				<div id="dialog46" class="window"><script type="text/javascript">showInfo("Selen",34,"Se","78,971u","Halbmetalle","fest","221°C","685°C")</script></div>
+				<div id="dialog47" class="window"><script type="text/javascript">showInfo("Brom",35,"Br","79,904u","Halogene","flüssig","-7,3°C","58,5°C")</script></div>
+				<div id="dialog48" class="window"><script type="text/javascript">showInfo("Krypton",36,"Kr","83,798u","Edelgase","gasförmig","-157,36°C","-152°C")</script></div>
+				<div id="dialog51" class="window"><script type="text/javascript">showInfo("Rubidium",37,"Rb","85,467u","Alkalimetalle","fest","39,31°C","688°C")</script></div>
+				<div id="dialog52" class="window"><script type="text/javascript">showInfo("Strontium",38,"Sr","87,62u","Erdalkalimetalle","fest","777°C","1380°C")</script></div>
+				<div id="dialog53" class="window"><script type="text/javascript">showInfo("Indium",49,"In","114,818u","Metalle","fest","156°C","2000°C")</script></div>
+				<div id="dialog54" class="window"><script type="text/javascript">showInfo("Zinn",50,"Sn","118,710u","Metalle","fest","231,93°C","2620°C")</script></div>
+				<div id="dialog55" class="window"><script type="text/javascript">showInfo("Antimon",51,"Sb","121,750u","Halbmetalle","fest","630,63°C","1635°C")</script></div>
+				<div id="dialog56" class="window"><script type="text/javascript">showInfo("Tellur",52,"Te","127,60u","Halbmetalle","fest","449,51°C","990°C")</script></div>
+				<div id="dialog57" class="window"><script type="text/javascript">showInfo("Iod",53,"I","126,90447u","Halogene","fest","113,70°C","184°C")</script></div>
+				<div id="dialog58" class="window"><script type="text/javascript">showInfo("Xenon",54,"Xe","131,293","Edelgase","gasförmig","-111,7°C","-108°C")</script></div>
+				<div id="dialog61" class="window"><script type="text/javascript">showInfo("Caesium",55,"Cs","132,905u","Alkalimetalle","fest","28,44°C","690°C")</script></div>
+				<div id="dialog62" class="window"><script type="text/javascript">showInfo("Barium",56,"Ba","137u","Erdalkalimetalle","fest","727°C","1637°C")</script></div>
+				<div id="dialog63" class="window"><script type="text/javascript">showInfo("Tahllium",81,"Tl","204,38u","Metalle","fest","304°C","1460°C")</script></div>
+				<div id="dialog64" class="window"><script type="text/javascript">showInfo("Blei",82,"Pb","207,2u","Metalle","fest","327,43°C","1744°C")</script></div>
+				<div id="dialog65" class="window"><script type="text/javascript">showInfo("Bismut",83,"Bi","208,98u","Metalle","fest","271,3°C","1560°C")</script></div>
+				<div id="dialog66" class="window"><script type="text/javascript">showInfo("Polonium",84,"Po","209,98u","Metalle","fest","254°C","962°C")</script></div>
+				<div id="dialog67" class="window"><script type="text/javascript">showInfo("Astat",85,"At","209,9871u","Halogene","fest","302°C","XX")</script></div>
+				<div id="dialog68" class="window"><script type="text/javascript">showInfo("Radon",86,"Rn","222u","Edelgase","gasförmig","-71°C","-61,8°C")</script></div>
+				<div id="dialog71" class="window"><script type="text/javascript">showInfo("Francium",87,"Fr","223,0197u","Alkalimetalle","fest","27°C","677°C")</script></div>
+				<div id="dialog72" class="window"><script type="text/javascript">showInfo("Radium",88,"Ra","226,0254u","Erdalkalimetalle","fest","20°C","700°C")</script></div>
+				<div id="dialog034" class="window"><script type="text/javascript">showInfo("Scandium",21,"Sc","44,95u","Übergangsmetalle","fest","1541°C","2730°C")</script></div>
+				<div id="dialog044" class="window"><script type="text/javascript">showInfo("Titan",22,"Ti","47.867","Übergangsmetalle","fest","1668","3260°C")</script></div>
+				<div id="dialog054" class="window"><script type="text/javascript">showInfo("Vanadium",23,"V","50,9415u","Übergangsmetalle","fest","1910°C","3407°C")</script></div>
+				<div id="dialog064" class="window"><script type="text/javascript">showInfo("Chrom",24,"Cr","51,9961u","Übergangsmetalle","fest","1907°C","2482°C")</script></div>
+				<div id="dialog074" class="window"><script type="text/javascript">showInfo("Mangan",25,"Mn","54,9380u","Übergangsmetalle","fest","1246°C","2100°C")</script></div>
+				<div id="dialog084" class="window"><script type="text/javascript">showInfo("Eisen",26,"Fe","55,845u","Übergangsmetalle","fest","1538°C","3000°C")</script></div>
+				<div id="dialog094" class="window"><script type="text/javascript">showInfo("Cobalt",27,"Co","58,933u","Übergangsmetalle","fest","1495°C","2900°C")</script></div>
+				<div id="dialog104" class="window"><script type="text/javascript">showInfo("Nickel",28,"Ra","58,6934u","Übergangsmetalle","fest","1455°C","2730°C")</script></div>
+				<div id="dialog114" class="window"><script type="text/javascript">showInfo("Kupfer",29,"Cu","63,564u","Übergangsmetalle","fest","1084°C","2595°C")</script></div>
+				<div id="dialog124" class="window"><script type="text/javascript">showInfo("Zink",30,"Zn","65,409u","Übergangsmetalle","fest","419°C","907°C")</script></div>
+				<div id="dialog035" class="window"><script type="text/javascript">showInfo("Yttrium",39,"Y","88,9058u","Übergangsmetalle","fest","1526°C","2930°C")</script></div>
+				<div id="dialog045" class="window"><script type="text/javascript">showInfo("Zirconium",40,"Zr","91,224u","Übergangsmetalle","fest","1857°C","4377°C")</script></div>
+				<div id="dialog055" class="window"><script type="text/javascript">showInfo("Niob",41,"Nb","92,9063u","Übergangsmetalle","fest","2477°C","4744°C")</script></div>
+				<div id="dialog065" class="window"><script type="text/javascript">showInfo("Molybdän",42,"Mo","95,95u","Übergangsmetalle","fest","2623°C","4612°C")</script></div>
+				<div id="dialog075" class="window"><script type="text/javascript">showInfo("Technetium",43,"Tc","98,9063u","Übergangsmetalle","fest","2157°C","4265°C")</script></div>
+				<div id="dialog085" class="window"><script type="text/javascript">showInfo("Ruthenium",44,"Ru","101,07u","Übergangsmetalle","fest","2334°C","4150°C")</script></div>
+				<div id="dialog095" class="window"><script type="text/javascript">showInfo("Rhodium",45,"Rh","102,90550u","Übergangsmetalle","fest","1964°C","3727°C")</script></div>
+				<div id="dialog105" class="window"><script type="text/javascript">showInfo("Palladium",46,"Pd","106,42","Übergangsmetalle","fest","1556°C","2960°C")</script></div>
+				<div id="dialog115" class="window"><script type="text/javascript">showInfo("Silber",47,"Ag","107,8682u","Übergangsmetalle","fest","962°C","2210°C")</script></div>
+				<div id="dialog125" class="window"><script type="text/javascript">showInfo("Cadmium",48,"Cd","112,414u","Übergangsmetalle","fest","321°C","765°C")</script></div>
+				<div id="dialog046" class="window"><script type="text/javascript">showInfo("Hafnium",72,"Hf","178,49u","Übergangsmetalle","fest","2233°C","4603°C")</script></div>
+				<div id="dialog056" class="window"><script type="text/javascript">showInfo("Tantal",73,"Ta","180,9479u","Übergangsmetalle","fest","3017°C","5420°C")</script></div>
+				<div id="dialog066" class="window"><script type="text/javascript">showInfo("Wolfram",74,"W","183,84u","Übergangsmetalle","fest","3422°C","5930°C")</script></div>
+				<div id="dialog076" class="window"><script type="text/javascript">showInfo("Rhenium",75,"Re","186,207u","Übergangsmetalle","fest","3186°C","5630°C")</script></div>
+				<div id="dialog086" class="window"><script type="text/javascript">showInfo("Osmium",76,"Os","190,23u","Übergangsmetalle","fest","3130°C","5000°C")</script></div>
+				<div id="dialog096" class="window"><script type="text/javascript">showInfo("Irdium",77,"Ir","192,217u","Übergangsmetalle","fest","2466°C","4130°C")</script></div>
+				<div id="dialog106" class="window"><script type="text/javascript">showInfo("Platin",78,"Pt","195,084u","Übergangsmetalle","fest","1768°C","3827°C")</script></div>
+				<div id="dialog116" class="window"><script type="text/javascript">showInfo("Gold",79,"Au","196,9665u","Übergangsmetalle","fest","1064°C","2970°C")</script></div>
+				<div id="dialog126" class="window"><script type="text/javascript">showInfo("Quecksilber",80,"Hg","200,59u","Übergangsmetalle","fest","-38,83°C","357°C")</script></div>
+				<div id="dialog047" class="window"><script type="text/javascript">showInfo("Rutherfordium",104,"Rf","261,1087u","Übergangsmetalle","fest","XX","XX")</script></div>
+                <div id="dialog057" class="window"><script type="text/javascript">showInfo("Dubnium",105,"Db","262,1138u","Übergangsmetalle","fest","XX°C","XX°C")</script></div>
+				<div id="dialog067" class="window"><script type="text/javascript">showInfo("Seaborgium",106,"Sg","263u","Übergangsmetalle","xx","XX","XX")</script></div>
+				<div id="dialog077" class="window"><script type="text/javascript">showInfo("Bohrium",107,"Bh","262,1229u","Übergangsmetalle","xx","XX","XX")</script></div>
+				<div id="dialog087" class="window"><script type="text/javascript">showInfo("Hassium",108,"Hs","270u","Übergangsmetalle","xx","xx","xx")</script></div>
+				<div id="dialog097" class="window"><script type="text/javascript">showInfo("Meitnerium",109,"Mt","268u","Übergangsmetalle","fest","xx","xx")</script></div>
+				<div id="dialog107" class="window"><script type="text/javascript">showInfo("Darmstadt",110,"Ds","281u","Übergangsmetalle","xx","xx","xx")</script></div>
+				<div id="dialog117" class="window"><script type="text/javascript">showInfo("Roentgenium",111,"Rg","280u","Übergangsmetalle","xx","xx","xx")</script></div>
+				<div id="dialog127" class="window"><script type="text/javascript">showInfo("Copernicium",112,"Cn","277u","Übergangsmetalle","xx","xx","xx")</script></div>
+                </div>
+                </div>
+	</div>
+</body>
+
+</html>

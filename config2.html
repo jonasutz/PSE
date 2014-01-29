@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Translation//EN">
+<html>
+<head>
+<title>Detailansicht</title>
+<meta name="publisher" content="Fabian Wiesmann">
+<meta name="copyright" content="Fabian Wiesmann">
+<meta name="page-topic" content="PSE">
+<meta name="author" content="Fabian Wiesmann">
+<meta name="language" content="de">
+<script src="js\jquery-ui-1.10.1.custom\js\jquery.min.js"></script>
+<script src="js\hammer.js-master/dist/hammer.js"></script>
+<script src="js\changeText/changeText.js"></script>
+<script src="js\cookie\cookie.js"></script>
+<script src="var\b.js"></script>
+<script src="var\h.js"></script>
+<script src="var\p.js"></script>
+<link rel="stylesheet" href="css\PSE.css" />
+<link rel="stylesheet" href="css\detail.css" />
+</head>
+
+<script>
+	function back()
+		{
+			window.location.href = "details3.html" + location.search, "_self";
+		}
+		
+	function save()
+		{
+			for(var i = 0;i < b.length;i++)
+			{
+				if(document.checkboxes.elements[i].checked)
+				{
+					setCookie(i,"+",400);
+				}
+				else
+				{
+					setCookie(i,"-",400);
+				}
+			}
+		}
+</script>
+
+<body bgcolor="#000000">
+<div class="appleIPadMiniViewport blau font no-shadow" style="position: fixed; top: 0px; left: 0px;">
+<div style='top:10px; left:10px; position:fixed;'><a href='#' onClick='back(); return false'><img src='img/sym/Pfeil_links_obenw.png' width='40px' height='40px' alt='Zurück'></a></img></div>
+
+<div id='sup' style='width:90%; top:10px; right:10px; position: absolute;'>
+
+<div id='con' style='float:left'>abcdefghijklmnopqrstuvwxyz</div>
+
+
+<div id='uni'>
+<table>
+<tbody>
+<tr><td>Temperatur</td><td>
+
+<form action="#">
+    <input type="button" name="C" value="&deg;C"
+      onclick="setCookie('a','c',400)">
+    <input type="button" name="K" value="K"
+      onclick="setCookie('a','k',400)">
+</form>
+
+</td></tr>
+
+<tr><td>Masse</td><td>
+
+<form action="#">
+    <input type="button" name="u" value="u"
+      onclick="setCookie('m','u',400)">
+    <input type="button" name="kg" value="kg"
+      onclick="setCookie('m','kg',400)">
+</form>
+
+</td></tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<script>
+
+var temp = "";
+
+
+temp = temp + "<div id='alpha' style='float:left'><form name='checkboxes' action='#'>";
+for (var i = 0; i < 25; i++)
+{
+	temp = temp + "<input type='checkbox' name='" + i + "' value='" + b[i] +
+		"'onclick='save()'>" + b[i] + "<br>";
+}
+temp = temp + "</div>"
+temp = temp + "<div id='beta' style='float:left'>";
+for (var i = 25; i < b.length; i++)
+{
+	temp = temp + "<input type='checkbox' name='" + i + "' value='" + b[i] +
+		"'onclick='save()'>" + b[i] + "<br>";
+}
+temp = temp + "</div>";
+
+changeText("con",temp);
+
+
+</script>
+</body>
+</html>

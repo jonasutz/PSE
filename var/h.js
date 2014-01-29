@@ -1,0 +1,83 @@
+var hs = new Array();
+
+	hs[2] = "Physikalische Gefahren";
+	hs[3] = "Gesundheitsgefahren";
+	hs[4] = "Umweltgefahren";
+ 
+	hs[200] = "Instabil, explosiv";
+	hs[201] = "Explosiv, Gefahr der Massenexplosion";
+	hs[202] = "Explosiv, große Gefahr durch Feuer, Luftdruck oder Splitter, Spreng- und Wurfst&uuml;cke";
+	hs[203] = "Explosiv; Gefahr durch Feuer, Luftdruck oder Splitter, Spreng- und Wurfst&uuml;cke";
+	hs[204] = "Gefahr durch Feuer oder Splitter, Spreng- und Wurfst&uuml;cke";
+	hs[205] = "Gefahr der Massenexplosion bei Feuer";
+	hs[220] = "Extrem entz&uuml;ndbares Gas";
+	hs[221] = "Entz&uuml;ndbares Gas";
+	hs[222] = "Extrem entz&uuml;ndbares Aerosol";
+	hs[223] = "Entz&uuml;ndbares Aerosol";
+	hs[224] = "Fl&uuml;ssigkeit und Dampf extrem entz&uuml;ndbar";
+	hs[225] = "Fl&uuml;ssigkeit und Dampf leicht entz&uuml;ndbar";
+	hs[226] = "Fl&uuml;ssigkeit und Dampf entz&uuml;ndbar";
+	hs[228] = "Entz&uuml;ndbarer Feststoff";
+	hs[240] = "Erw&auml;rmung kann Explosion verursachen";
+	hs[241] = "Erw&auml;rmung kann Brand oder Explosion verursachen";
+	hs[242] = "Erw&auml;rmung kann Brand verursachen";
+	hs[250] = "Entz&uuml;ndet sich in Ber&uuml;hrung mit Luft von selbst";
+	hs[251] = "Selbsterhitzungsf&auml;hig; kann in Brand geraten";
+	hs[252] = "In großen Mengen selbsterhitzungsf&auml;hig; kann in Brand geraten";
+	hs[260] = "In Ber&uuml;hrung mit Wasser entstehen entz&uuml;ndbare Gase, die sich spontan entz&uuml;nden k&ouml;nnen";
+	hs[261] = "In Ber&uuml;hrung mit Wasser entstehen entz&uuml;ndbare Gase";
+	hs[270] = "Kann Brand verursachen oder verst&auml;rken; Oxidationsmittel";
+	hs[271] = "Kann Brand oder Explosion verursachen; starkes Oxidationsmittel";
+	hs[272] = "Kann Brand verst&auml;rken; Oxidationsmittel";
+	hs[280] = "Enth&auml;lt Gas unter Druck; kann bei Erw&auml;rmung explodieren";
+	hs[281] = "Enth&auml;lt tiefgek&uuml;hltes Gas; kann K&auml;lteverbrennungen oder –Verletzungen verursachen";
+	hs[290] = "Kann gegen&uuml;ber Metallen korrosiv sein";
+	
+
+    hs[300] = "Lebensgefahr bei Verschlucken";
+    hs[301] = "Giftig bei Verschlucken";
+    hs[302] = "Gesundheitssch&auml;dlich bei Verschlucken";
+    hs[304] = "Kann bei Verschlucken und Eindringen in die Atemwege t&ouml;dlich sein";
+    hs[310] = "Lebensgefahr bei Hautkontakt";
+    hs[311] = "Giftig bei Hautkontakt";
+    hs[312] = "Gesundheitssch&auml;dlich bei Hautkontakt";
+    hs[314] = "Verursacht schwere Ver&auml;tzungen der Haut und schwere Augensch&auml;den";
+    hs[315] = "Verursacht Hautreizungen";
+    hs[317] = "Kann allergische Hautreaktionen verursachen";
+    hs[318] = "Verursacht schwere Augensch&auml;den";
+    hs[319] = "Verursacht schwere Augenreizung";
+    hs[330] = "Lebensgefahr bei Einatmen";
+    hs[331] = "Giftig bei Einatmen";
+    hs[332] = "Gesundheitssch&auml;dlich bei Einatmen";
+    hs[334] = "Kann bei Einatmen Allergie, asthmaartige Symptome oder Atembeschwerden verursachen";
+    hs[335] = "Kann die Atemwege reizen";
+    hs[336] = "Kann Schl&auml;frigkeit und Benommenheit verursachen";
+    hs[340] = "Kann genetische Defekte verursachen";
+    hs[341] = "Kann vermutlich genetische Defekte verursachen";
+	hs[350] = "Kann Krebs erzeugen";
+	//hs[350i]= "Kann bei Einatmen Krebs erzeugen";
+    hs[351] = "Kann vermutlich Krebs erzeugen";
+    hs[360] = "Kann die Fruchtbarkeit beeintr&auml;chtigen oder das Kind im Mutterleib sch&auml;digen";
+    //hs[360F]= "Kann die Fruchtbarkeit beeintr&auml;chtigen";
+    //hs[360D]= "Kann das Kind im Mutterleib sch&auml;digen";
+    //hs[360FD]= "Kann die Fruchtbarkeit beeintr&auml;chtigen. Kann das Kind im Mutterleib sch&auml;digen";
+    //hs[360Fd]= "Kann die Fruchtbarkeit beeintr&auml;chtigen. Kann vermutlich das Kind im Mutterleib sch&auml;digen";
+    //hs[360Df]= "Kann das Kind im Mutterleib sch&auml;digen. Kann vermutlich die Fruchtbarkeit beeintr&auml;chtigen";
+    hs[361]= "Kann vermutlich die Fruchtbarkeit beeintr&auml;chtigen oder das Kind im Mutterleib sch&auml;digen ";
+    //hs[361f]= "Kann vermutlich die Fruchtbarkeit beeintr&auml;chtigen";
+    //hs[361d]= "Kann vermutlich das Kind im Mutterleib sch&auml;digen";
+    //hs[361fd]= "Kann vermutlich die Fruchtbarkeit beeintr&auml;chtigen. Kann vermutlich das Kind im Mutterleib sch&auml;digen";
+    hs[362]= "Kann S&auml;uglinge &uuml;ber die Muttermilch sch&auml;digen";
+    hs[370]= "Sch&auml;digt die Organe";
+    hs[371] = "Kann die Organe sch&auml;digen";
+    hs[372] = "Sch&auml;digt die Organe";
+    hs[373] = "Kann die Organe sch&auml;digen";
+
+	
+    hs[400] = "Sehr giftig f&uuml;r Wasserorganismen.";
+    hs[410] = "Sehr giftig f&uuml;r Wasserorganismen mit langfristiger Wirkung.";
+    hs[411] = "Giftig f&uuml;r Wasserorganismen, mit langfristiger Wirkung.";
+    hs[412] = "Sch&auml;dlich f&uuml;r Wasserorganismen, mit langfristiger Wirkung.";
+    hs[413] = "Kann f&uuml;r Wasserorganismen sch&auml;dlich sein, mit langfristiger Wirkung.";
+    hs[420] = "Sch&auml;digt die &ouml;ffentliche Gesundheit und die Umwelt durch Ozonabbau in der &auml;ußeren Atmosph&auml;re.";
+

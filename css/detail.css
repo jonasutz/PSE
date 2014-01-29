@@ -1,0 +1,200 @@
+.main
+{
+padding: 0px;
+margin: 0px;
+}
+object
+{
+overflow: hidden;
+padding: 0px;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+font-weight:normal;
+margin: 0px;
+}
+.ab
+{
+position: relative;
+top: 30px;
+left: 30px;
+}
+.a1
+{
+background-repeat:no-repeat;
+
+position: fixed;
+top: 0px;
+left: 0px;
+width: 379px;
+height: 374px;
+}
+.a1c
+{
+background-repeat:no-repeat;
+
+position: fixed;
+top: 0px;
+left: 0px;
+width: 379px;
+height: 374px;
+}
+.a2
+{
+background-repeat:no-repeat;
+
+position: fixed;
+top: 384px;
+left: 0px;
+width: 379px;
+height: 374px;
+}
+.a2c
+{
+background-repeat:no-repeat;
+
+position: fixed;
+top: 384px;
+left: 0px;
+width: 379px;
+height: 374px;
+}
+.b1
+{
+background-repeat:no-repeat;
+
+position: fixed;
+top: -768px;
+left: 389px;
+width: 625px;
+height: 758px;
+}
+.slideinup
+{
+	top: 0px;
+	left: 389px;
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	animation-name: slideinup;
+	-webkit-animation-name: slideinup;
+}
+@keyframes slideinup {
+  from {    top: -768px;  }
+ 
+  to {    top: 0px;  }
+}
+
+@-webkit-keyframes slideinup {
+  from {    top: -768px;  }
+ 
+  to {    top: 0px;  }
+}
+
+.b2
+{
+
+background-repeat:no-repeat;
+
+position: fixed;
+top: 0px;
+left: 389px;
+width: 625px;
+height: 758px;
+}
+.b2c
+{
+
+background-repeat:no-repeat;
+
+position: fixed;
+top: 0px;
+left: 389px;
+width: 625px;
+height: 758px;
+}
+.slideoutup
+{
+  top: -768px;
+  left: 389px;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-name: slideoutup;
+  -webkit-animation-name: slideoutup;
+}
+@keyframes slideoutup {
+  from {    top: 0px;  }
+ 
+  to {    top: -768px;  }
+}
+
+@-webkit-keyframes slideoutup {
+  from {    top: 0px;  }
+ 
+  to {    top: -768px;  }
+}
+
+.slideoutdown
+{
+  top: 768px;
+  left: 389px;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-name: slideoutdown;
+  -webkit-animation-name: slideoutdown;
+}
+@keyframes slideoutdown 
+{
+  from {    top: 0px;  }
+ 
+  to {    top: 768px;  }
+}
+
+@-webkit-keyframes slideoutdown 
+{
+  from {    top: 0px;  }
+ 
+  to {    top: 768px;  }
+}
+
+.b3
+{
+
+background-repeat:no-repeat;
+position: fixed;
+top: 768px;
+left: 389px;
+width: 625px;
+height: 758px;
+}
+.slideindown
+{
+	top: 0px;
+	left: 389px;
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	animation-name: slideindown;
+	-webkit-animation-name: slideindown;
+}
+@keyframes slideindown
+{
+	from {		top: 768px;	}
+	
+	to{		top: 0px;	}
+}
+
+@-webkit-keyframes slideindown
+{
+	from {		top: 768px;	}
+	
+	to{		top: 0px;	}
+}
+
+.config
+{
+	background-repeat:no-repeat;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
