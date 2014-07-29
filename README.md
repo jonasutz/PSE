@@ -1,12 +1,16 @@
 PSE
 ===
-Stand: 12.12.13
+Stand: August 2014
+
 
 Derzeitige Bugs:
-- Maske passt sich bei NG nicht an #001
+- Maske passt sich bei NG nicht an #001 
+- Schließen Button von modal-Window
+- Daten fehlen teils 
+- Code Sign auf eierOs7
+- 
 
-Geplante Änderungen P-Seminar:
-- Mehrere Elemente 'lose' und gleichzeitig markieren[FEATURE]
+
 
 
 
