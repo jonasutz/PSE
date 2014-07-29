@@ -383,26 +383,7 @@ color:#000000;
          <script>
 
 $(document).ready(function() {
-document.ontouchmove = function(e) {e.preventDefault()};
 
-     $('#container a.modalButton').click(function(e){
-          e.preventDefault();          
-          loadPage(e.target.href);
-          });
-     
-     
-function loadPage(url){
-   $('#container').load(url + '#container');
-}
-
-
-
-
-//	$('a.modalButton').click(function(e){
-//		e.preventDefault();
-  //      $('#container').load(e.target.href);
-//        alert(e.target.href);
-//	});
 	
 	MultiMarkierenAn = new Boolean(false);
 	MarkierenAn = new Boolean(false);
